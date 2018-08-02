@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.jaykallen.samples">
+
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
+
+    <application
+        android:name=".StartApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver android:name=".alarm.AlarmMgr" />
+
+        <activity
+            android:name=".alarm.AlarmActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".animation.AnimationActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".aynctask.AsyncActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".cursorloader.LoadyActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".deeplinking.DeepLinkActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".eventbus.EventBusActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".eventbus.EventBusActivity2"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".eventbus.EventBusActivity3"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".firebase.FirebaseActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".fragment.FragActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".jobscheduler.JobActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".lifecycle.LifecycleActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".lifecycle.LifecycleActivity2"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".mvp.MvpActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".recycler.RecyclerActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".room.RoomActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".rxjava.RxjavaActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".service.ServiceActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".viewpager.ViewPagerActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+    </application>
+
+</manifest>

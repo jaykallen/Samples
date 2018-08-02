@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    >
+    <TextView
+        android:text="Please select Yes or No"
+        android:id="@+id/messageTextView"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textSize="18dp"
+        android:layout_margin="8dp"
+        android:textColor="@color/colorBlack"
+        />
+
+    <TextView
+        android:layout_below="@id/messageTextView"
+        android:background="@color/colorWhite"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp" />
+
+    <LinearLayout
+        android:layout_below="@id/messageTextView"
+        android:layout_width="match_parent"
+        android:layout_height="48dp">
+
+        <RelativeLayout
+            android:id="@+id/noLayout"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="48dp">
+
+            <TextView
+                android:gravity="center"
+                android:textSize="20sp"
+                android:textColor="@color/colorBlack"
+                android:text="No"
+                android:layout_width="match_parent"
+                android:layout_height="48dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/yesLayout"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="48dp">
+
+            <TextView
+                android:textSize="20sp"
+                android:gravity="center"
+                android:textColor="@color/colorBlack"
+                android:text="Yes"
+                android:layout_width="match_parent"
+                android:layout_height="48dp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
