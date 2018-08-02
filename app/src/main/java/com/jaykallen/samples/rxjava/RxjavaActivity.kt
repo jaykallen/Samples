@@ -22,6 +22,7 @@ class RxjavaActivity : AppCompatActivity() {
         listenJust()
         listenJust2()
         listenMap()
+        listenFilter()
     }
 
     // The subscriber to the create will run the onNext everytime something is seen.
@@ -70,6 +71,19 @@ class RxjavaActivity : AppCompatActivity() {
                 .subscribe(object : DisposableObserver<String>() {
                     override fun onNext(s: String) {
                         Timber.d("Listen Map: $s")
+                    }
+                    override fun onError(e: Throwable) {}
+                    override fun onComplete() {}
+                })
+    }
+
+    private fun listenFilter() {
+        // The filter needs to have a boolean to decide what to filter out.
+        Shooter.getMap()
+                .filter { s -> s.contains("a") }
+                .subscribe(object : DisposableObserver<String>() {
+                    override fun onNext(s: String) {
+                        Timber.d("Listen Filter: $s")
                     }
                     override fun onError(e: Throwable) {}
                     override fun onComplete() {}
